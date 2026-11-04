@@ -1,0 +1,47 @@
+[build]
+  publish = "."
+
+# File panduan & SQL ada di folder yang sama, tapi tidak ditampilkan ke publik
+[[redirects]]
+  from = "/schema.sql"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/buat_akun_demo.sql"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tambah_fitur_foto.sql"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tambah_foto_profil.sql"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "camera=(self)"
+    Referrer-Policy = "strict-origin-when-cross-origin"
